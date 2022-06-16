@@ -4,55 +4,23 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
 	<title>Информация HTML</title>
-	<style>
-		body {
-			background-color: #87BBA2;
-		}
-		a, a:visited {
-			background: linear-gradient(#364958, #55828B);
-			line-height: 20px;
-			padding: 10px;
-			border-radius: 10px;
-			color: white;
-			font-style: italic;
-			font-size: 1.2em;
-			text-decoration: none;
-		}
-		img, iframe {
-			margin: 0 auto;
-		}
-		img {
-			display: block;
-		}
-		iframe {
-			display: block;
-		}
-		ul {
-			color: white;
-		}
-		li {
-			padding: 10px 0;
-		}
-	</style>
 </head>
 <body>
-	<header>
-		<h1>Этот сайт посвящён некоторым аспектам HTML/CSS</h1>
-		<img src="source/html.png" alt="html" width='100px'>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/W4MIiV4nZDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</header>
-	<nav>
-		<p>Навигация по сайту</p>
-			<ul>
-				<li><a href="tags.html">Теги HTML</a></li>
-				<li><a href="properties.html">Свойства CSS</a></li>
-			</ul>
-	</nav>
-	<main>
-	</main>
-	<footer>
-		Сайт выполнен Костей Кравчуком IST1st
-	</footer>
+	<div class="wrapper">
+		<div class="title"><img src="source/css.png" alt="">Этот сайт посвящён некоторым аспектам HTML/CSS <img src="source/html.png" alt=""></div>
+		<nav>
+				<ul>
+					<li><a href="tags.html">Теги HTML</a></li>
+					<li><a href="properties.html">Свойства CSS</a></li>
+				</ul>
+		</nav>
+	</div>
+	<div class="footer" style='position: absolute; left: 0; bottom: 0'>
+		<div class="wrapper">
+			<div>Работа выполнена Костей Кравчуком IST1st</div>
+		</div>
+	</div>
 </body>
 </html>
