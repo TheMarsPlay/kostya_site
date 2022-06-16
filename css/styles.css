@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+
+body {
+	background-color: #040F16;
+	font-family: "Comfortaa", sans-serif;
+}
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 4em;
+	color: rgb(228, 228, 228)
+}
+.title img {
+	display: block;
+	padding: 20px;
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button {
+	width: 120px;
+	height: 40px;
+	margin: 20px auto 40px auto;
+}
+nav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+}
+
+nav ul li {
+	width: 200px;
+	height: 50px;
+	list-style: none;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+nav ul li:hover {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+nav ul li a,
+nav ul li a:visited {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: rgb(228, 228, 228);
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin: 0 0 200px 0;
+	color: rgb(228, 228, 228);
+	line-height: 40px;
+	font-size: 1.5em;
+}
+
+.article__title {
+	margin: 0 0 40px 0;
+	text-align: center;
+	width: 100%;
+	font-size: 2em;
+}
+
+.article__example {
+	padding: 20px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.inline-example,
+.block-example,
+.inline-block-example {
+	padding: 20px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.inline-example>*,
+.block-example>*,
+.inline-block-example>* {
+	border: 1px solid white;
+	margin: 10px;
+}
+
+.inline-example>* {
+	display: inline;
+}
+
+.block-example>* {
+	display: block;
+}
+
+.inline-block-example>* {
+	display: inline-block;
+}
+
+.float-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 700px;
+	height: 200px;
+	border-radius: 20px;
+	margin: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	float: left;
+}
+
+.float-right {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	height: 300px;
+	border-radius: 20px;
+	margin: 20px;
+	background-color: rgba(255, 255, 255, 0.1);
+	float: right;
+}
+
+.footer {
+	width: 100%;
+	height: 60px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: rgb(228, 228, 228);
+}
+
+i {
+	font-style: normal;
+	box-sizing: border-box;
+	border-radius: 6px;
+	border: 3px solid rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
+}
