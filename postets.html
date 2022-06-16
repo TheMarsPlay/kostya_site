@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.static, .relative, .absolute, .sticky {
+			position: relative;
+			display: flex;
+			background-color: gray;
+			padding: 10px;
+			margin: 10px;
+		}
+		.blue, .yellow {
+			width: 80px;
+			height: 80px;
+			margin: 5px
+		}
+		.blue {
+			background-color: blue;
+			border: 3px solid lightblue;
+		}
+		.yellow {
+			background-color: yellow;
+			border: 3px solid red;
+		}
+		.static > .yellow {
+			position: static;
+		}
+		.relative > .yellow {
+			position: relative;
+			top: 20px;
+			left: 20px;
+		}
+		.absolute > .yellow {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+		}
+		.yellow {
+			position: sticky;
+			top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Снизу расположено три квадрата, синие - статически, а жёлтый будет меняться</h3>
+	<span>display: static</span>
+	<div class="static">
+		<div class="blue"></div>
+		<div class="yellow"></div>
+		<div class="blue"></div>
+	</div>
+	<span>display: relative</span>
+	<div class="relative">
+		<div class="blue"></div>
+		<div class="yellow"></div>
+		<div class="blue"></div>
+	</div>
+	<span>display: absolute</span>
+	<div class="absolute">
+		<div class="blue"></div>
+		<div class="yellow"></div>
+		<div class="blue"></div>
+	</div>
+	<span>display: sticky</span>
+	<div class="blue"></div>
+	<div class="yellow"></div>
+	<div class="blue"></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

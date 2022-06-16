@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Свойства CSS</title>
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Comfortaa");
+
+		body {
+			background-color: #040F16;
+			font-family: "Comfortaa", sans-serif;
+		}
+		.title {
+			text-align: center;
+			font-size: 6em;
+			color: rgb(228, 228, 228)
+		}
+		.button	{
+			width: 120px;
+			height: 40px;
+			margin: 20px auto 40px auto;
+		}
+		nav .button a, nav .button a:visited {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			background-color: rgba(255, 255, 255, 0.1);
+			color: rgb(228, 228, 228);
+		}
+		nav .button a:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		.wrapper {
+			max-width: 1170px;
+			margin: 0 auto;
+		}
+		.article {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			margin: 0 0 200px 0;
+			color: rgb(228, 228, 228);
+			line-height: 40px;
+			font-size: 1.5em;
+		}
+		.article__title {
+			margin: 0 0 40px 0;
+			text-align: center;
+			width: 100%;
+			font-size: 2em;
+		}
+		.article__example {
+			padding: 20px;
+			border-radius: 20px;
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		.inline-example, .block-example, .inline-block-example {
+			padding: 20px;
+			border-radius: 20px;
+			background: rgba(255, 255, 255, 0.1);
+		}
+		.inline-example > *, .block-example > *, .inline-block-example > * {
+			border: 1px solid white;
+			margin: 10px;
+		}
+		.inline-example > * {
+			display: inline;
+		}
+		.block-example > * {
+			display: block;
+		}
+		.inline-block-example > * {
+			display: inline-block;
+		}
+		.float-left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 700px;
+			height: 200px;
+			border-radius: 20px;
+			margin: 20px;
+			background-color: rgba(255, 255, 255, 0.1);
+			float: left;
+		}
+		.float-right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 600px;
+			height: 300px;
+			border-radius: 20px;
+			margin: 20px;
+			background-color: rgba(255, 255, 255, 0.1);
+			float: right;
+		}
+		i {
+			font-style: normal;
+			box-sizing: border-box;
+			border-radius: 6px;
+			border: 3px solid rgba(255, 255, 255, 0.1);
+			background-color: rgba(255,255,255,0.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="title">Свойства CSS</div>
+		<nav>
+			<div class="button"><a href="index.html">Главная</a></div>
+		</nav>
+		<main>
+			<div class="article">
+				<div class="article__title">Свойство display</div>
+				<div class="article__info">Свойство <i>display</i> отвечает за вывод и визуальное отображение элементов на странице</div>
+				<div class="article__info">К примеру, значение <i>inline</i> свойства <i>display</i> сделает элемент <i>строчным</i></div>
+				<div class="article__example">
+					<div>Примеры:</div>
+					<ul>
+						<li>
+							<div>display: inline</div>
+							<div class="inline-example">
+								<div>Тег div</div>
+								<span>Тег span</span>
+								<div>Ещё один тег div</div>
+							</div>
+						</li>
+						<li>
+							<div>display: block</div>
+							<div class="block-example">
+								<div>Тег div</div>
+								<span>Тег span</span>
+								<div>Ещё один тег div</div>
+							</div>
+						</li>
+						<li>
+							<div>display: inline-block</div>
+							<div class="inline-block-example">
+								<div>Тег div</div>
+								<span>Тег span</span>
+								<div>Ещё один тег div</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="article__info">Однако отличие <i>inline</i> от <i>inline-block</i> заключается в том, что <i>строчно-блочные</i> объекты ведут себя как <i>строчные</i>, но на них действуют свойства <i>блочных</i></div>
+			</div>
+			<div class="article">
+				<div class="article__title">Свойство position</div>
+				<div class="article__info">Свойство CSS <i>position</i> указывает, как элемент позиционируется в документе. <i>top</i>, <i>right</i>, <i>bottom</i>, <i>left</i> определяют конечное местоположение позиционированных элементов.</div>
+				<div class="article__info">
+					Типы позиционирования
+					<ul>
+						<li>Позиционируемый элемент — это элемент, у которого вычисленное значение <i>position</i> является <i>relative</i>, <i>absolute</i>, <i>fixed</i> либо sticky. (Другими словами, это все, кроме <i>static</i>.)</li>
+						<li>Относительно позиционируемый элемент является элементом, вычисленное значение <i>position</i> которого является <i>relative</i>. Свойства <i>top</i> и <i>bottom</i> определяют смещение по вертикали от его нормального положения; свойства <i>left</i> и <i>right</i> задают горизонтальное смещение.</li>
+						<li>Абсолютно позиционируемый элемент — это элемент, чьё вычисленное значение <i>position</i> является <i>absolute</i> или <i>fixed</i>. <i>top</i>, <i>right</i>, <i>bottom</i> и <i>left</i> (en-US) задают смещения от краёв <i>содержащего блок элемента</i>. (Содержащий блок является предком, относительно которого расположен элемент.) Если элемент имеет поля, они добавляются к смещению. Элемент устанавливает новый контекст форматирования блока (BFC) для своего содержимого.</li>
+						<li>Элемент с липкой позицией — это элемент, у которого значение вычисленного <i>position</i> является <i>sticky</i>. Он рассматривается как относительно позиционированный до тех пор, пока <i>содержащий его блок</i> не пересечёт указанный порог (например, установка <i>top</i> в значение, отличное от <i>auto</i>) внутри его корня потока (или в контейнере, в котором он прокручивается), после чего он обрабатывается как «застрявший» до тех пор, пока не встретит противоположный край <i>содержащего его блока</i>.</li>
+					</ul>
+				</div>
+				<div class="article__info">Вы можете перейти по этой <a href="postets.html">ссылке</a> что-бы посмотреть всё это на примере</div>
+			</div>
+			<div class="article">
+				<div class="article__title">Свойство float</div>
+				<div class="article__info">Свойство <i>float</i> CSS указывает, что элемент должен быть взят из <i>нормального потока</i> и помещён вдоль <i>левой</i> или <i>правой</i> стороны его контейнера, где текст и встроенные элементы будут <i>обтекать</i> его.</div>
+				<div class="article__example">
+					<div>Пример:</div>
+					<div class="float-left">Этот блок с float: left</div>
+					<div class="float-right">А этот с float: right</div>
+					<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatum, sit minus soluta aperiam quaerat molestias nemo, hic vitae odio modi consequuntur unde voluptate accusantium deserunt officiis deleniti nihil! Eius fuga ullam, accusantium vel numquam iste voluptate rerum velit nesciunt ipsa inventore dicta doloremque, ut molestiae cum suscipit eum labore impedit aperiam repellat nulla eaque? Expedita vero eius adipisci ipsum. Laudantium, illo sit! Fugiat sit ipsam quibusdam placeat sed, quidem illo eius corrupti veniam error, suscipit neque consectetur pariatur provident vel doloribus eligendi harum maiores exercitationem, delectus et ea! Nemo architecto eligendi quos aperiam, ab mollitia commodi voluptas explicabo illo?</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
